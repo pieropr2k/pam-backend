@@ -3,6 +3,8 @@ import dotenv from 'dotenv'
 import { OPENAI_API_KEY } from '../config.js';
 dotenv.config()
 
+console.log(OPENAI_API_KEY)
+
 const openai = new OpenAI({
     apiKey: OPENAI_API_KEY
 }); 

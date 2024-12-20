@@ -10,6 +10,7 @@ export const sequelize = new Sequelize(
   {
     host: DB_HOST,
     dialect: "postgres",
+    port: DB_PORT, // Asegúrate de que esté configurado correctamente
   }
 );
 

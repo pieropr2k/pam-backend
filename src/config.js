@@ -11,3 +11,5 @@ export const PASSWORD = process.env.PASSWORD
 // || "password";
 
 export const DB_NAME = process.env.DB_NAME
+
+export const OPENAI_API_KEY = process.env.OPENAI_API_KEY

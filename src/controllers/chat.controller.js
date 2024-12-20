@@ -1,9 +1,10 @@
 import OpenAI from 'openai'
 import dotenv from 'dotenv'
+import { OPENAI_API_KEY } from '../config.js';
 dotenv.config()
 
 const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY
+    apiKey: OPENAI_API_KEY
 }); 
 
 export const handleResponse = async (req, res) => {

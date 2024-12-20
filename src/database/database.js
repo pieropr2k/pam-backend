@@ -1,21 +1,15 @@
 import Sequelize from "sequelize"; 
-import { PASSWORD, DB_NAME } from "../config.js";
+import { PASSWORD, DB_NAME, DB_USER, DB_HOST } from "../config.js";
 
 export const sequelize = new Sequelize(
   //"projectsdb", // db name,
   DB_NAME, // db name,
-  "postgres", // username
+  DB_USER, // username
   PASSWORD, // password
   //"mysecretpassword", // password
   {
-    host: "localhost",
+    host: DB_HOST,
     dialect: "postgres",
-    // pool: {
-    //   max: 5,
-    //   min: 0,
-    //   require: 30000,
-    //   idle: 10000,
-    // },
-    // logging: false,
   }
 );
+

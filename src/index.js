@@ -1,3 +1,6 @@
+import dotenv from 'dotenv'
+dotenv.config()
+
 import express from "express"
 import cors from "cors"
 import morgan from "morgan"
@@ -7,7 +10,9 @@ import favoritesRoutes from "./routes/favorites.routes.js"
 import chatRoutes from "./routes/chat.routes.js"
 import authRoutes from "./routes/auth.routes.js";
 import { sequelize } from "./database/database.js";
-import { FRONTEND_URL } from "./config.js";
+import { FRONTEND_URL, OPENAI_API_KEY } from "./config.js";
+
+console.log(OPENAI_API_KEY)
 
 const app = express()
 

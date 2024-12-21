@@ -12,13 +12,6 @@ import authRoutes from "./routes/auth.routes.js";
 import { sequelize } from "./database/database.js";
 import { FRONTEND_URL, OPENAI_API_KEY, PASSWORD } from "./config.js";
 
-console.log(OPENAI_API_KEY)
-console.log(process.env.ABECE)
-console.log(process.env.ABECE)
-
-console.log(PASSWORD)
-console.log(process.env.ABECE)
-
 const app = express()
 
 app.use(cors({

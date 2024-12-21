@@ -4,8 +4,7 @@ import { TOKEN_SECRET } from '../config.js';
 import { createAccessToken } from '../libs/jwt.js';
 import User from '../models/user.model.js';
 
-export const register = async (req, res) => {
-    console.log(req.body)
+export const register = async (req, res) => { 
     const { username, email, password } = req.body;
 
     try {
@@ -57,13 +56,11 @@ export const login = async (req, res) => {
 };
 
 export const verifyToken = async (req, res) => {
-    console.log(req.cookies)
     const { token } = req.cookies;
     if (!token) return res.send(false);
 
     try {
-        const decoded = jwt.verify(token, TOKEN_SECRET);
-
+        const decoded = jwt.verify(token, TOKEN_SECRET); 
         // Buscar usuario por ID
         const userFound = await User.findByPk(decoded.id);
         if (!userFound) return res.sendStatus(401);
